@@ -1,0 +1,209 @@
+.titleimg {
+  height: 150px;
+  width: 350px;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background-color: navy;
+}
+
+h1, h2, h3, p {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.briefing {
+  direction: rtl;
+  overflow: hidden;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+nav {
+  background-color: dodgerblue;
+}
+
+.navibar {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.navibar a {
+  margin: 0 1px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: dodgerblue;
+  font-family: "Roboto", sans-serif;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: white;
+  background-color: dodgerblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+  color: dodgerblue;
+}
+
+h1, h2, h3 {
+  color: white;
+  font-size: 30px;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+}
+
+li {
+  display: inline;
+}
+
+li a {
+  padding: 10px 10px;
+}
+
+video {
+  display: block;
+  margin: 0 auto;
+}
+
+.universeboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1px;
+  place-items: center;
+}
+
+.USAbox, .Chinabox, .GLAbox {
+  height: 300px;
+  width: 300px;
+  border: 10px solid;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.USAbox {
+  border-color: skyblue;
+  background-color: steelblue;
+}
+
+.Chinabox {
+  border-color: red;
+  background-color: maroon;
+}
+
+.GLAbox {
+  border-color: greenyellow;
+  background-color: green;
+}
+
+.USAbox img, .Chinabox img, .GLAbox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 18px;
+  }
+  li a {
+    padding: 8px 8px;
+  }
+  .titleimg {
+    width: 50%;
+    height: 100%;
+  }
+  video {
+    display: block;
+    margin: 0 auto;
+  }
+  .universeboard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .USAbox, .Chinabox, .GLAbox {
+    margin-bottom: 20px;
+  }
+  .GLAbox {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 768px) {
+  .titleimg {
+    width: 50%;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 16px;
+  }
+  li a {
+    padding: 6px 6px;
+  }
+  video {
+    display: block;
+    margin: 0 auto;
+  }
+  .universeboard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .USAbox, .Chinabox, .GLAbox {
+    height: 200px;
+    width: 200px;
+    border-width: 8px;
+    border-radius: 150%;
+    margin-bottom: 20px;
+  }
+  .USAbox a, .Chinabox a, .GLAbox a {
+    width: 100%;
+    height: 100% img;
+    height-width: 100%;
+    height-height: 100%;
+    height-object-fit: contain;
+    height-border-radius: 100%;
+  }
+}/*# sourceMappingURL=Generals.css.map */
